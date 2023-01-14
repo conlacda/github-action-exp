@@ -1,5 +1,5 @@
 name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: ${{ github.actor }} is learning GitHub Actions.
 on: [push]
 env:
   DAY_OF_WEEK: Monday
@@ -10,7 +10,6 @@ jobs:
       Greeting: Hello
     steps:
       - name: "Say Hello Mona it's Monday"
-        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
         run: echo "${{ env.Greeting }} ${{ env.First_Name }}. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona
