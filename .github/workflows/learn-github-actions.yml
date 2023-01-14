@@ -12,3 +12,12 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v # cmd
+
+inputs:
+  file-path: # id of input
+    description: "Path to test script"
+    required: true
+    default: "test-file.js"
+outputs:
+  results-file: # id of output
+    description: "Path to results file"
