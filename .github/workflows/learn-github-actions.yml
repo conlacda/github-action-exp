@@ -1,4 +1,5 @@
 name: learn-github-actions
+description: "Receives file and generates output"
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
@@ -6,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest # môi trường chạy
     steps:
       - name: My first step # định nghĩa tên của step
-        description: "Receives file and generates output"
         inputs:
           file-path: # id of input
             description: "Path to test script"
