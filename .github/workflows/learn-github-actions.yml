@@ -13,4 +13,4 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - name: Step using docker
-        run: docker://alpine:latest # docker://{image}:{tag}
+        run: docker://alpine:3.8 # docker://{image}:{tag}
