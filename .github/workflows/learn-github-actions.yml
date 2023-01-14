@@ -2,15 +2,7 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version: # tên của job 
-    runs-on: ubuntu-latest # môi trường chạy
+  my_first_job:
     steps:
-      - name: My first step # định nghĩa tên của step
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3 # không có tên thì bỏ qua name
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
-      - name: Step using docker
-        run: docker://alpine:3.8 # docker://{image}:{tag}
+      - name: My first step
+        uses: docker://alpine:3.8
