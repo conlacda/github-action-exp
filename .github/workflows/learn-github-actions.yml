@@ -1,12 +1,24 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
+jobs:
+  check-bats-version: # tên của job 
+    runs-on: ubuntu-latest # môi trường chạy
+    steps:
+      - name: My first step # định nghĩa tên của step
+        description: "Receives file and generates output"
+        inputs:
+          file-path: # id of input
+            description: "Path to test script"
+            required: true
+            default: "test-file.js"
+        outputs:
+          results-file: # id of output
+            description: "Path to results file"
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3 # không có tên thì bỏ qua name
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v # cmd
 
-inputs:
-  file-path: # id of input
-    description: "Path to test script"
-    required: true
-    default: "test-file.js"
-outputs:
-  results-file: # id of output
-    description: "Path to results file"
