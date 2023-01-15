@@ -101,3 +101,12 @@ jobs:
       - run: sh ./example.sh
 ```
 </details>
+
+## Run
+```yml
+- run: pwd
+  shell: bash
+
+- run: |
+    echo "run multiple lines"
+```
