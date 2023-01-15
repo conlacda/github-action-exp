@@ -6,4 +6,6 @@ jobs:
   job-with-github-action-repo: # tên của job
     runs-on: ubuntu-latest # môi trường chạy
     steps:
+      - name: This is the first step name
+        uses: actions/checkout@v3
       - run: sh ./example.sh
