@@ -112,5 +112,34 @@ jobs:
     echo "run multiple lines"
 ```
 
+## Secret key
+> https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository
+
+Tab `Setting` -> `Secrets and variables` -> `Actions` -> `Repository secrets` tạo 1 key với `name = SECRET_KEYY` và `content = sk`
+<details>
+  <summary>Secret key example</summary>
+
+```yml
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+
+jobs:
+  job-with-github-action-repo: # tên của job
+    runs-on: ubuntu-latest # môi trường chạy
+    steps:
+      - name: This is the first step name
+        uses: actions/checkout@v3
+      - name: Retrieve secret
+        env:
+          super_secret: ${{ secrets.SECRET_KEYY }}
+        if: ${{ env.super_secret == 'sk'}} 
+        run: echo "sk is skk"
+```
+</details>
+
+Tại action, mọi từ khóa trùng với key sẽ được chuyển thành dấu `**`. Tại ví dụ này `echo "sk is skk"` sẽ thành `*** is ***k`.  
+Thế nên secret key lúc nào cũng phải là 1 chuỗi dài và đảm bảo nó ko thể xuất hiện trong file `yml` 1 chút nào. Ví dụ key 15 kí tự random,..
+
 ## Adding secret key
 https://docs.github.com/en/actions/using-workflows/about-workflows#advanced-workflow-features
