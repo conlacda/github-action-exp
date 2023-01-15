@@ -199,3 +199,5 @@ jobs:
 
 ## Check lint
 https://github.com/marketplace/actions/lint-action
+
+# Thử nghiệm auto-deploy với github action | tích hợp deploy với netlify, vercel | tích hợp Circle CI vào github action
