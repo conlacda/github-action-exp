@@ -3,13 +3,17 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 
 jobs:
-  job-with-github-action-repo: # tên của job
-    runs-on: ubuntu-latest # môi trường chạy
+  setup:
+    runs-on: ubuntu-latest
     steps:
-      - name: This is the first step name
-        uses: actions/checkout@v3
-      - name: Retrieve secret
-        env:
-          super_secret: ${{ secrets.SCRET_KEYY }}
-        if: ${{ env.super_secret == 'sk'}} 
-        run: echo "sk is skk"
+      - run: echo "setting up"
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: "building app"
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: "testing"
