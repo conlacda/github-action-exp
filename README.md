@@ -171,4 +171,28 @@ jobs:
 ```
 </details>
 
+## Matrix
+Khi muốn chạy cùng 1 việc trên nhiều phiên bản thì dùng matrix. Ví dụ muốn test trên c++11, c++14, c++17, c++20 cùng 1 lúc.
 
+<details>
+  <summary>Run with matrix</summary>
+  
+  ![image](https://user-images.githubusercontent.com/33364412/212527696-e77fbe22-27d2-45c9-8451-8b28abfc17ae.png)
+
+```yml
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12, 14, 16]
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+```
+</details>
