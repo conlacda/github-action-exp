@@ -196,3 +196,6 @@ jobs:
           node-version: ${{ matrix.node }}
 ```
 </details>
+
+## Check lint
+https://github.com/marketplace/actions/lint-action
