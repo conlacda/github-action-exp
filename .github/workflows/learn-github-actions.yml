@@ -9,6 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
       - name: Super-Linter
         uses: github/super-linter@v4.10.0
