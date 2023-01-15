@@ -1,15 +1,10 @@
 name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions.
+run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
-env:
-  DAY_OF_WEEK: Monday
+
 jobs:
-  greeting-job:
-    runs-on: ubuntu-latest
-    env:
-      Greeting: Hello
+  job-with-github-action-repo: # tên của job
+    runs-on: ubuntu-latest # môi trường chạy
     steps:
-      - name: "Say Hello Mona it's Monday"
-        run: echo "${{ env.Greeting }} ${{ env.First_Name }}. Today is $DAY_OF_WEEK!"
-        env:
-          First_Name: Mona
+      - run: ./example.sh # chạy 1 file có trong source code
+        shell: bash

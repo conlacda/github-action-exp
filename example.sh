@@ -1,0 +1,1 @@
+echo "Comment from a bash file"
