@@ -141,5 +141,31 @@ jobs:
 Tại action, mọi từ khóa trùng với key sẽ được chuyển thành dấu `**`. Tại ví dụ này `echo "sk is skk"` sẽ thành `*** is ***k`.  
 Thế nên secret key lúc nào cũng phải là 1 chuỗi dài và đảm bảo nó ko thể xuất hiện trong file `yml` 1 chút nào. Ví dụ key 15 kí tự random,..
 
-## Adding secret key
-https://docs.github.com/en/actions/using-workflows/about-workflows#advanced-workflow-features
+## Dependent jobs
+Mặc định các job được chạy song song với nhau. Nếu muốn chạy tuần tự thì dùng **needs**
+
+<details>
+  <summary>Github dependent jobs</summary>
+  
+```yml
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "setting up"
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "building app"
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "testing"
+```
+</details>
