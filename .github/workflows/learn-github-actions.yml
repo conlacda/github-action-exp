@@ -6,5 +6,4 @@ jobs:
   job-with-github-action-repo: # tên của job
     runs-on: ubuntu-latest # môi trường chạy
     steps:
-      - run: ls /home/runner/work/github-action-exp/github-action-exp
-        shell: bash
+      - run: sh ./example.sh
