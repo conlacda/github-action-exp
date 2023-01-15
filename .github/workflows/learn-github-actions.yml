@@ -11,9 +11,9 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
-      - run: "building app"
+      - run: echo "building app"
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: "testing"
+      - run: echo "testing"
