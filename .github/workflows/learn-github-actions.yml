@@ -6,5 +6,7 @@ jobs:
   job-with-github-action-repo: # tên của job
     runs-on: ubuntu-latest # môi trường chạy
     steps:
-      - run: bash example.sh
-        working-directory: ./
+      - run: |
+          chmod +x ./example.sh
+          ./example.sh
+        shell: bash
