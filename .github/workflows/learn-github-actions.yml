@@ -6,5 +6,5 @@ jobs:
   job-with-github-action-repo: # tên của job
     runs-on: ubuntu-latest # môi trường chạy
     steps:
-      - run: ${GITHUB_WORKSPACE}/.github/example.sh # chạy 1 file có trong source code
+      - run: ./example.sh # chạy 1 file có trong source code
         shell: bash
