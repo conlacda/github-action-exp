@@ -146,7 +146,8 @@ Mặc định các job được chạy song song với nhau. Nếu muốn chạy
 
 <details>
   <summary>Github dependent jobs</summary>
-  
+
+  ![image](https://user-images.githubusercontent.com/33364412/212527545-f3600d1f-ab4b-4a47-bd1a-c47bd5f430ae.png)
 ```yml
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
@@ -169,3 +170,5 @@ jobs:
       - run: echo "testing"
 ```
 </details>
+
+
