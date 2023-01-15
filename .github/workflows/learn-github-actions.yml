@@ -12,4 +12,4 @@ jobs:
         env:
           super_secret: ${{ secrets.SCRET_KEYY }}
         if: ${{ env.super_secret == 'sk'}} 
-        run: echo "Sk is sk"
+        run: echo "sk is skk"
