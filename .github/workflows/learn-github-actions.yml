@@ -11,5 +11,5 @@ jobs:
       - name: Retrieve secret
         env:
           super_secret: ${{ secrets.SCRET_KEYY }}
-        run: |
-          echo "$super_secret"
+        if: ${{ super_secret == 'sk'}}
+        run: echo "Sk is sk"
