@@ -12,3 +12,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+      - name: Super-Linter
+        uses: github/super-linter@v4.10.0
