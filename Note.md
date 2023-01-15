@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: '14'
       - run: npm install -g bats
-        shell: bash
       - run: bats -v # cmd
-      - run: ./.github/scripts/build.sh # chạy 1 file có trong source code
+      - run: ./example.sh # chạy 1 file có trong source code
+        shell: bash
 ```
 ## Sử dụng env
 
