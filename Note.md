@@ -25,6 +25,13 @@ jobs:
       - run: ./example.sh # chạy 1 file có trong source code
         shell: bash
 ```
+Đoạn này rất quan trọng:
+```yml
+    steps:
+      - name: This is the first step name
+        uses: actions/checkout@v3
+```
+thể hiện việc dùng action của github. Nếu không có thì nhiều phần không hoạt động (ví dụ: chạy 1 file bash, lấy danh sách file,...)
 ## Sử dụng env
 
 `env` có thể được sử dụng tại nhiều nơi như bên dưới
@@ -70,3 +77,27 @@ jobs:
       if: ${{ env.name == 'Long'}}
       run: echo "name is Long"
 ```
+
+## Chạy file bash
+Tạo file `example.sh` nằm ở thư  mục ngoài
+```sh
+echo "Hello from a sh file"
+```
+
+<details>
+  <summary>Github action run a bash file</summary>
+
+```yml
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+
+jobs:
+  job-with-github-action-repo: # tên của job
+    runs-on: ubuntu-latest # môi trường chạy
+    steps:
+      - name: This is the first step name
+        uses: actions/checkout@v3
+      - run: sh ./example.sh
+```
+</details>
