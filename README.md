@@ -77,6 +77,7 @@ jobs:
       if: ${{ env.name == 'Long'}}
       run: echo "name is Long"
 ```
+Không có `else`, muốn dùng else thì viết thêm **!** vào
 
 ## Chạy file bash
 Tạo file `example.sh` nằm ở thư  mục ngoài
