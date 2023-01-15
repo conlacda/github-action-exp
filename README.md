@@ -198,6 +198,6 @@ jobs:
 </details>
 
 ## Check lint
-https://github.com/github/super-linter
+TODO: check lint mỗi khi push code
 
-# Thử nghiệm auto-deploy với github action | tích hợp deploy với netlify, vercel | tích hợp Circle CI vào github action
+### Thử nghiệm auto-deploy với github action | tích hợp deploy với netlify, vercel | tích hợp Circle CI vào github action
