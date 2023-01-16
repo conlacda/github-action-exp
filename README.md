@@ -197,6 +197,50 @@ jobs:
 ```
 </details>
 
+## Chạy test mỗi khi push
+
+<details>
+  <summary>Python test file</summary>
+
+```py
+# content of test_sample.py
+def func(x):
+    return x + 1
+
+
+def test_answer():
+    assert func(3) == 5
+
+# run "pytest" to test.
+# pip install pytest
+```
+</details>
+
+<details>
+  <summary>Github action run test on push</summary>
+
+```yml
+# https://github.com/marketplace/actions/setup-python
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4.5.0
+        with:
+          python-version: '3.10' 
+      - run: |
+          pip install pytest
+          pytest
+
+```
+</details>
+
 ## Check lint
 TODO: check lint mỗi khi push code
 

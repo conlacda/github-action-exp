@@ -2,9 +2,6 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # https://github.com/github/super-linter#:~:text=the%20Environment%20variable-,GITHUB_TOKEN%3A%20%24%7B%7B%20secrets.GITHUB_TOKEN%20%7D%7D,-in%20your%20workflow
-
 jobs:
   build:
     runs-on: ubuntu-latest
