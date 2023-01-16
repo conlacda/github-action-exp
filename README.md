@@ -201,3 +201,6 @@ jobs:
 TODO: check lint mỗi khi push code
 
 ### Thử nghiệm auto-deploy với github action | tích hợp deploy với netlify, vercel | tích hợp Circle CI vào github action
+
+## Thêm ghi chú github context
+${{ secrets.GITHUB_TOKEN }}
