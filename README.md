@@ -1,5 +1,5 @@
 # Github workflow
-
+[![learn-github-actions](https://github.com/conlacda/github-action-exp/actions/workflows/learn-github-actions.yml/badge.svg)](https://github.com/conlacda/github-action-exp/actions/workflows/learn-github-actions.yml)
 ## Tham khảo
 * [Github action repo](https://github.com/actions) - tại đây chứa các môi trường khác nhau để tự setup.
 ## Cấu trúc cho 1 github workflow
@@ -240,6 +240,9 @@ jobs:
 
 ```
 </details>
+
+## Tạo badge
+Tại màn hình run job có luôn phần tạo badge
 
 ## Check lint
 TODO: check lint mỗi khi push code
