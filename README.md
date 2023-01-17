@@ -241,6 +241,27 @@ jobs:
 ```
 </details>
 
+## Github action on specific branches
+<details>
+  <summary>Expand example</summary>
+
+```yml
+on:  
+  push:
+    branches: # multiple branches
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+  pull_request_comment: # chỉ với dòng này mà không có thêm branches lồng bên trong nghĩa là chạy trên mọi nhánh
+
+on: [push] # run on every push
+
+```
+</details>
+
+
 ## Tạo badge
 Tại màn hình run job có luôn phần tạo badge
 
