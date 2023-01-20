@@ -1,7 +1,7 @@
 # Github workflow
 [![learn-github-actions](https://github.com/conlacda/github-action-exp/actions/workflows/learn-github-actions.yml/badge.svg)](https://github.com/conlacda/github-action-exp/actions/workflows/learn-github-actions.yml)
 ## Tham khảo
-* [Github action repo](https://github.com/actions) - tại đây chứa các môi trường khác nhau để tự setup.
+* [Github action repo](https://github.com/actions) - tại đây chứa các môi trường khác nhau để tự setup. - vào mục action rồi tìm cũng được, mọi thứ được cài đặt sẵn cho rồi
 ## Cấu trúc cho 1 github workflow
 
 Tạo file `.github/workflows/ii_job_name.yml`
